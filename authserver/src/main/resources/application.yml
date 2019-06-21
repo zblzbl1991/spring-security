@@ -4,11 +4,11 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://106.13.10.6:3306/oauth2?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://106.13.10.6:3306/ouath2?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
     type:
+    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 7777
-  servlet-path: /auth
 eureka:
   client:
     service-url:
