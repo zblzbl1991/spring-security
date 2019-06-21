@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth-server
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://106.13.10.6:3306/oauth2?useUnicode=true&characterEncoding=utf-8
+    type:
+server:
+  port: 7777
+  servlet-path: /auth
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

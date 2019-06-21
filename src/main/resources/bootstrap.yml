@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: zuul-server
+server:
+  port: 8800
+eureka:
+  client:
+    service-url:
+      defaultZone: http://zbl:zblzbl@${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    client-a:
+      path: /client/**
+      serviceId: client-a
+security:
+  basic:
+    enabled: false

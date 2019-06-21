@@ -1,0 +1,14 @@
+server:
+  port: 8888
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://zbl:zblzbl@${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname: 127.0.0.1
+security:
+  user:
+    name: zbl
+    password: zblzbl
